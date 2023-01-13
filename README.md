@@ -18,3 +18,11 @@
    3. npm install cors.
    4. created .env file.
    5. set PORT in .env file.
+   6. npm install nodemon
+   
+
+3. Connect to MONGODB
+
+   1. npm install mongodb
+   2. create user in Atlas
+   3. connecting mongodb with .env
