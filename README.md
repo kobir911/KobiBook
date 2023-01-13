@@ -26,3 +26,5 @@
    1. npm install mongodb
    2. create user in Atlas
    3. connecting mongodb with .env
+
+4. Create User Schema   
