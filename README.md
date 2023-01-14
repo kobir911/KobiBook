@@ -27,4 +27,13 @@
    2. create user in Atlas
    3. connecting mongodb with .env
 
-4. Create User Schema   
+4. Create User Schema 
+
+5. Created Register & Validate data
+
+   1. validate email by regex
+   2. validate first name
+   3. validate last name
+   4. validate username live validation
+   5. npm install bcrypt 
+   6. bcrypt password
