@@ -37,3 +37,11 @@
    4. validate username live validation
    5. npm install bcrypt 
    6. bcrypt password
+
+6. JWT Token
+
+   1. npm install jsonwebtoken
+
+
+7. Setup Google OAuth to Access Google APIs
+

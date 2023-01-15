@@ -1,6 +1,11 @@
-const { validateEmail, validateLength, validateUsername } = require('../helpers/validation');
+const {
+  validateEmail,
+  validateLength,
+  validateUsername,
+} = require('../helpers/validation');
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
+const { generateToken } = require('../helpers/tokens');
 
 exports.register = async (req, res) => {
   try {
@@ -44,8 +49,8 @@ exports.register = async (req, res) => {
         .status(400)
         .json({ message: 'password must between 6 and 40 characters!' });
     }
-  
-    const cryptedPassword =await bcrypt.hash(password , 12);
+
+    const cryptedPassword = await bcrypt.hash(password, 12);
 
     let tempUsername = first_name + last_name;
     let newUsername = await validateUsername(tempUsername);
@@ -61,6 +66,7 @@ exports.register = async (req, res) => {
       bDay,
       gender,
     }).save();
+    const emailVerificationToken = generateToken({ id: user._id.toString()}, '60m');
     res.status(201).json(user);
   } catch (err) {
     res.status(500).json({ message: err.message });
