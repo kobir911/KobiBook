@@ -45,3 +45,9 @@
 
 7. Setup Google OAuth to Access Google APIs
 
+8. Finish register & sending email to client
+
+   1. npm install nodemailer
+   2. nom install googleapis
+   3. create html example of mail response to client
+
